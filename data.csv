@@ -1,0 +1,17 @@
+name,job,status,requestBody
+Praveen,QA Engineer,201,"{
+    ""name"": ""{{name}}"",
+    ""job"": ""{{job}}""
+}"
+David,QA Engineer,201,"{
+    ""name"": ""{{name}}"",
+    ""job"": ""{{job}}""
+}"
+Praveen,QA Engineer,201,"{
+    ""name"": ""{{name}}"",
+    ""job"": ""{{job}}""
+}"
+David,QA Engineer,201,"{
+    ""name"": ""{{name}}"",
+    ""job"": ""{{job}}""
+}"
