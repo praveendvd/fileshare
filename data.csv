@@ -1,17 +1,29 @@
-name,job,status,requestBody
+name,job,status,requestBody,responseBody
 Praveen,QA Engineer,201,"{
     ""name"": ""{{name}}"",
     ""job"": ""{{job}}""
+}","{
+  ""name"": ""{{name}}"",  
+  ""job"": ""{{job}}""
 }"
 David,QA Engineer,201,"{
     ""name"": ""{{name}}"",
     ""job"": ""{{job}}""
+}","{
+  ""name"": ""{{name}}"",  
+  ""job"": ""{{job}}""
 }"
 Praveen,QA Engineer,201,"{
     ""name"": ""{{name}}"",
     ""job"": ""{{job}}""
+}","{
+  ""name"": ""{{name}}"",  
+  ""job"": ""{{job}}""
 }"
 David,QA Engineer,201,"{
     ""name"": ""{{name}}"",
     ""job"": ""{{job}}""
+}","{
+  ""name"": ""{{name}}"",  
+  ""job"": ""{{job}}""
 }"
