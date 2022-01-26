@@ -18,19 +18,19 @@ jobs:
     steps:
       - name: Praveen
         env:
-          CODACY_PROJECT_TOKEN: ${{ secrets.password_new }}
+          CODACY_PROJECT_TOKEN: ${{ secrets.PASSWORD_NEW }}
         if: "${{env.CODACY_PROJECT_TOKEN == 'praveen' }}"
         run: echo "praveen"
         
       - name: david
         env:
-          CODACY_PROJECT_TOKEN: ${{ secrets.password_new}}
+          CODACY_PROJECT_TOKEN: ${{ secrets.PASSWORD_NEW}}
         if: "${{env.CODACY_PROJECT_TOKEN == 'david' }}"
         run: echo "david"
         
       - name: empty
         env:
-          CODACY_PROJECT_TOKEN: ${{ secrets.password_new }}
+          CODACY_PROJECT_TOKEN: ${{ secrets.PASSWORD_NEW }}
         if: "${{env.CODACY_PROJECT_TOKEN == '' }}"
         run: echo "empty"
           
