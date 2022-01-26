@@ -17,12 +17,24 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Praveen
-        if: ${{env.super_secret}} != "praveen"
-        run: echo "Praveen"
-      - name: David
-        if: ${{env.super_secret}} != "david"
-        run: echo "David"
-        env: # Or as an environment variable
-          super_secret: ${{secrets.name}}
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.password }}
+        if: "${{env.CODACY_PROJECT_TOKEN == 'praveen' }}"
+        run: echo "praveen"
+        
+      - name: david
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.password }}
+        if: "${{env.CODACY_PROJECT_TOKEN == 'david' }}"
+        run: echo "david"
+        
+      - name: empty
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.password }}
+        if: "${{env.CODACY_PROJECT_TOKEN == '' }}"
+        run: echo "empty"
+          
+      
+          
 
 
