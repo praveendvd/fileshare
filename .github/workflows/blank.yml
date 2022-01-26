@@ -6,10 +6,6 @@ name: CI
 on:
   workflow_dispatch:
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:  
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,10 +17,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Praveen
-        if: ${{secrets.name}} != "praveen"
-        run: echo "This step will be skipped on Monday and Wednesday"
+        if: ${{env.super_secret}} != "praveen"
+        run: echo "Praveen"
       - name: David
-        if: ${{secrets.name}} != "david"
-        run: echo "This step will be skipped on Monday and Wednesday"
+        if: ${{env.super_secret}} != "david"
+        run: echo "David"
+        env: # Or as an environment variable
+          super_secret: ${{secrets.name}}
 
 
